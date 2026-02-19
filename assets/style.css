@@ -115,6 +115,16 @@ code {
   border-radius: 6px;
 }
 
+figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.82rem;
+  color: var(--color-text-sub);
+  margin-top: 0.3rem;
+}
+
 .purpose-detail {
   font-size: 0.88rem;
   color: var(--color-text-sub);
