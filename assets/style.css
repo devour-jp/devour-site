@@ -281,7 +281,7 @@ footer a {
 .footer-breadcrumb img {
   width: 14px;
   height: 14px;
-  transform: translateY(-0.5px);
+  transform: translateY(2.8px);
 }
 
 .footer-breadcrumb a {
