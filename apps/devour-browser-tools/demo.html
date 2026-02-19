@@ -61,18 +61,11 @@
     </ul>
     <p>下のテキストエリアで動作を確認できます。</p>
 
-    <h2>テスト用テキストエリア</h2>
-    <textarea id="testArea" rows="12" style="width: 100%; font-family: inherit; font-size: 0.9rem; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); resize: vertical;" placeholder="ここにペーストしてください"></textarea>
-    <p style="margin-top: 0.5rem; padding: 0.8rem; border: 2px solid var(--color-accent); border-radius: 6px; font-weight: 600;">コピー後、テキストエリアをクリックして <strong>Ctrl+V</strong>（Mac: <strong>Cmd+V</strong>）でペーストできることを確認してください。</p>
-    <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.8rem;">
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <button onclick="document.getElementById('testArea').value=''" style="padding: 8px 20px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); cursor: pointer; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Clear</button>
-        <span style="font-size: 0.82rem; color: var(--color-text-sub);">テキストエリアの内容をクリアします。</span>
-      </div>
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <button onclick="navigator.clipboard.writeText('')" style="padding: 8px 20px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); cursor: pointer; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Clear Clipboard</button>
-        <span style="font-size: 0.82rem; color: var(--color-text-sub);">クリップボードの内容を削除します。コピー前の状態に戻す際に使用します。</span>
-      </div>
+    <textarea id="testArea" rows="12" style="width: 100%; font-family: inherit; font-size: 0.9rem; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); resize: vertical;" placeholder="テスト用テキストエリア"></textarea>
+    <p style="margin-top: 0.5rem; padding: 0.8rem; border: 2px solid var(--color-accent); border-radius: 6px; font-weight: 600;">方法 A〜C の操作後、テスト用テキストエリアをクリックして <strong>Ctrl+V</strong>（Mac: <strong>Cmd+V</strong>）でペーストできることを確認してください。</p>
+    <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.8rem;">
+      <button onclick="document.getElementById('testArea').value='';navigator.clipboard.writeText('')" style="padding: 8px 20px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); cursor: pointer; font-size: 0.85rem; font-weight: 600; white-space: nowrap;">Clear</button>
+      <span style="font-size: 0.82rem; color: var(--color-text-sub);">テキストエリアとクリップボードの内容をクリアします。</span>
     </div>
 
     <h2>確認ポイント</h2>
