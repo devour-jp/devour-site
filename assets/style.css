@@ -1,11 +1,25 @@
 /* devour.jp - minimal site style */
+/* OS のダーク/ライトモード設定に自動連動 */
 
 :root {
   --color-bg: #fafafa;
   --color-text: #333;
+  --color-text-sub: #666;
   --color-accent: #2a6;
   --color-border: #ddd;
+  --color-footer: #888;
   --max-width: 640px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1a1a;
+    --color-text: #e0e0e0;
+    --color-text-sub: #999;
+    --color-accent: #4c8;
+    --color-border: #333;
+    --color-footer: #777;
+  }
 }
 
 * {
@@ -63,6 +77,13 @@ a {
   color: var(--color-accent);
 }
 
+code {
+  background: var(--color-border);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
 .app-list {
   list-style: none;
   padding: 0;
@@ -81,7 +102,7 @@ a {
 .app-list .desc {
   display: block;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-text-sub);
 }
 
 footer {
@@ -90,9 +111,9 @@ footer {
   padding-top: 1rem;
   border-top: 1px solid var(--color-border);
   font-size: 0.85rem;
-  color: #888;
+  color: var(--color-footer);
 }
 
 footer a {
-  color: #888;
+  color: var(--color-footer);
 }
