@@ -223,8 +223,26 @@ footer a {
   color: var(--color-footer);
 }
 
+.footer-logo {
+  margin-bottom: 1.2rem;
+}
+
+.footer-logo img {
+  width: 28px;
+  height: 28px;
+}
+
 .footer-copyright {
   font-size: 0.8rem;
   padding-top: 1rem;
   border-top: 1px solid var(--color-border);
+}
+
+.footer-copyright a {
+  color: var(--color-footer);
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  color: var(--color-accent);
 }
