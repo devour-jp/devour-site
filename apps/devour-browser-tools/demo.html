@@ -214,6 +214,7 @@
     <div id="tab-zenn" class="demo-panel">
       <h2>概要</h2>
       <p>Zenn の Web 編集機能をブロックし、CLI/Git での記事管理を徹底するための機能です。</p>
+      <p>以下のテストは、オプション画面の Feature Toggles で <strong>Zenn Web Editor ブロックが有効</strong>（デフォルト）であることを前提とします。</p>
 
       <h2>リダイレクトの確認</h2>
       <ol>
@@ -222,20 +223,28 @@
       </ol>
 
       <h2>UI ブロックの確認</h2>
+      <p style="font-size: 0.88rem; color: var(--color-text-sub); margin-bottom: 0.8rem;"><strong>前提条件:</strong> Zenn にログイン済みで、記事が1件以上あること（未公開・公開問いません）。</p>
       <ol>
         <li><a href="https://zenn.dev/dashboard" target="_blank" rel="noopener">Zenn ダッシュボード</a>にアクセスします</li>
         <li>「編集する」ボタンがグレーアウトされていることを確認します</li>
         <li>ホバー時にツールチップが表示されることを確認します</li>
         <li>記事タイトルのリンクが閲覧ページに変更されていることを確認します</li>
       </ol>
-      <p>※ Zenn にログイン済みの場合のみ確認できます。オプション画面の Feature Toggles で無効化も可能です。</p>
+
+      <h2>Feature Toggles の確認</h2>
+      <ol>
+        <li>オプション画面で <strong>Zenn Web Editor ブロック</strong> を<strong>無効</strong>にします</li>
+        <li>Zenn ダッシュボードをリロードし、編集ボタンが通常通り機能することを確認します</li>
+        <li>オプション画面で <strong>Zenn Web Editor ブロック</strong> を<strong>再度有効</strong>にします</li>
+        <li>Zenn ダッシュボードをリロードし、ブロックが復帰していることを確認します</li>
+      </ol>
 
       <h2>確認ポイント</h2>
       <div class="checklist" data-group="zenn">
         <label class="check-item"><input type="checkbox" data-key="zenn-0"><span>編集ページ URL へのアクセスが <code>https://zenn.dev</code> にリダイレクトされること</span></label>
         <label class="check-item"><input type="checkbox" data-key="zenn-1"><span>ダッシュボード上の編集ボタンがグレーアウト＋クリック無効であること</span></label>
         <label class="check-item"><input type="checkbox" data-key="zenn-2"><span>ホバー時にツールチップ「devour browser tools により抑制されています」が表示されること</span></label>
-        <label class="check-item"><input type="checkbox" data-key="zenn-3"><span>Feature Toggles で無効化すると、ブロックが解除されること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="zenn-3"><span>Feature Toggles で無効化→ブロック解除、再度有効化→ブロック復帰すること</span></label>
         <div class="check-status" data-group="zenn"></div>
       </div>
     </div>
