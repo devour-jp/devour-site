@@ -47,6 +47,58 @@
     .demo-panel.active {
       display: block;
     }
+    .checklist {
+      margin-top: 0.5rem;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.4rem 0;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+    .check-item input[type="checkbox"] {
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      accent-color: var(--color-accent);
+    }
+    .check-item:has(input:checked) span {
+      text-decoration: line-through;
+      color: var(--color-text-sub);
+    }
+    .check-status {
+      margin-top: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .check-status .status-msg {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .check-status .status-msg.all-passed {
+      color: var(--color-accent);
+    }
+    .check-status .status-msg.in-progress {
+      color: var(--color-text-sub);
+    }
+    .check-status .clear-btn {
+      padding: 4px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      background: var(--color-bg);
+      color: var(--color-text-sub);
+      cursor: pointer;
+      font-size: 0.78rem;
+    }
+    .check-status .clear-btn:hover {
+      color: var(--color-text);
+      border-color: var(--color-text-sub);
+    }
   </style>
 </head>
 <body>
@@ -148,13 +200,14 @@
       </div>
 
       <h2>確認ポイント</h2>
-      <ul>
-        <li>方法 A / B / C それぞれで緑色の "OK" バッジが表示されること</li>
-        <li>方法 C で innerText と innerHTML の結果が異なること（HTML タグの有無）</li>
-        <li>方法 D で Options 画面にドメインとセレクタが自動入力されること</li>
-        <li>コピー後、テキストエリアに Ctrl+V でペーストできること</li>
-        <li>全ての処理がブラウザ内で完結し、外部への通信が発生しないこと</li>
-      </ul>
+      <div class="checklist" data-group="copy">
+        <label class="check-item"><input type="checkbox" data-key="copy-0"><span>方法 A / B / C それぞれで緑色の "OK" バッジが表示されること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="copy-1"><span>方法 C で innerText と innerHTML の結果が異なること（HTML タグの有無）</span></label>
+        <label class="check-item"><input type="checkbox" data-key="copy-2"><span>方法 D で Options 画面にドメインとセレクタが自動入力されること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="copy-3"><span>コピー後、テキストエリアに Ctrl+V でペーストできること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="copy-4"><span>全ての処理がブラウザ内で完結し、外部への通信が発生しないこと</span></label>
+        <div class="check-status" data-group="copy"></div>
+      </div>
     </div>
 
     <!-- Zenn Block Tab -->
@@ -178,12 +231,13 @@
       <p>※ Zenn にログイン済みの場合のみ確認できます。オプション画面の Feature Toggles で無効化も可能です。</p>
 
       <h2>確認ポイント</h2>
-      <ul>
-        <li>編集ページ URL へのアクセスが <code>https://zenn.dev</code> にリダイレクトされること</li>
-        <li>ダッシュボード上の編集ボタンがグレーアウト＋クリック無効であること</li>
-        <li>ホバー時にツールチップ「devour browser tools により抑制されています」が表示されること</li>
-        <li>Feature Toggles で無効化すると、ブロックが解除されること</li>
-      </ul>
+      <div class="checklist" data-group="zenn">
+        <label class="check-item"><input type="checkbox" data-key="zenn-0"><span>編集ページ URL へのアクセスが <code>https://zenn.dev</code> にリダイレクトされること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="zenn-1"><span>ダッシュボード上の編集ボタンがグレーアウト＋クリック無効であること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="zenn-2"><span>ホバー時にツールチップ「devour browser tools により抑制されています」が表示されること</span></label>
+        <label class="check-item"><input type="checkbox" data-key="zenn-3"><span>Feature Toggles で無効化すると、ブロックが解除されること</span></label>
+        <div class="check-status" data-group="zenn"></div>
+      </div>
     </div>
   </main>
 
@@ -214,6 +268,7 @@
   </footer>
 
   <script>
+    // Tab switching
     document.querySelectorAll('.demo-tab').forEach(tab => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
@@ -222,6 +277,58 @@
         document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
       });
     });
+
+    // Checklist: localStorage persistence + all-passed feedback
+    const STORAGE_KEY = 'dbt-demo-checks';
+
+    function loadChecks() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+    }
+
+    function saveChecks(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function updateStatus(group) {
+      const checklist = document.querySelector(`.checklist[data-group="${group}"]`);
+      const boxes = checklist.querySelectorAll('input[type="checkbox"]');
+      const statusEl = checklist.querySelector('.check-status');
+      const total = boxes.length;
+      const checked = Array.from(boxes).filter(cb => cb.checked).length;
+      const allPassed = checked === total;
+
+      statusEl.innerHTML = allPassed
+        ? '<span class="status-msg all-passed">All passed</span><button class="clear-btn" data-group="' + group + '">Clear</button>'
+        : '<span class="status-msg in-progress">' + checked + ' / ' + total + '</span>' + (checked > 0 ? '<button class="clear-btn" data-group="' + group + '">Clear</button>' : '');
+
+      statusEl.querySelectorAll('.clear-btn').forEach(btn => {
+        btn.addEventListener('click', () => clearGroup(group));
+      });
+    }
+
+    function clearGroup(group) {
+      const state = loadChecks();
+      const checklist = document.querySelector(`.checklist[data-group="${group}"]`);
+      checklist.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+        delete state[cb.dataset.key];
+      });
+      saveChecks(state);
+      updateStatus(group);
+    }
+
+    // Init
+    const state = loadChecks();
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+      cb.checked = !!state[cb.dataset.key];
+      cb.addEventListener('change', () => {
+        const s = loadChecks();
+        if (cb.checked) s[cb.dataset.key] = true; else delete s[cb.dataset.key];
+        saveChecks(s);
+        updateStatus(cb.closest('.checklist').dataset.group);
+      });
+    });
+    ['copy', 'zenn'].forEach(updateStatus);
   </script>
 </body>
 </html>
