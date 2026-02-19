@@ -18,20 +18,21 @@
 <body>
   <main id="content">
     <h1>devour browser tools — Demo</h1>
-    <p>このページでは、拡張機能の主要機能を実際に試すことができます。3つのコピー方法と、ペーストトグルを確認できます。</p>
+    <p>このページでは、拡張機能の主要機能を実際に試すことができます。3つのコピー方法でテキストをクリップボードにコピーし、任意のアプリケーションにペーストできます。</p>
 
     <h2>前提</h2>
     <ul>
       <li>この拡張機能には <code>devour.jp</code> + <code>#content</code> がビルトインルールとして登録されています</li>
+      <li>コピーしたテキストはクリップボードに保存されます</li>
       <li>全ての操作はブラウザ内で完結し、外部への通信は発生しません</li>
     </ul>
 
     <h2>方法 A: 拡張アイコンでコピー</h2>
-    <p>ツールバーの拡張アイコンをクリックしてコピーする方法です。</p>
+    <p>ツールバーの拡張アイコンをクリックしてコピーする方法です。ドメインルールにマッチする場合、そのセレクタが優先されます。</p>
     <ol>
       <li>ツールバーの<strong>拡張アイコンをクリック</strong>します</li>
-      <li>options で設定した Target element ID（またはページ全体）のテキストがコピーされます</li>
-      <li>拡張アイコンに <strong>"P"</strong> バッジが表示されます（ペースト待機状態）</li>
+      <li>ビルトインルール（<code>devour.jp</code> → <code>#content</code>）に基づき、テキストがクリップボードにコピーされます</li>
+      <li>成功すると緑色の <strong>"OK"</strong> バッジが表示されます</li>
     </ol>
 
     <h2>方法 B: 右クリック → Copy preset element</h2>
@@ -39,8 +40,8 @@
     <ol>
       <li>このページ上の任意の場所で<strong>右クリック</strong>します</li>
       <li>コンテキストメニューから <strong>"Copy preset element (domain rule)"</strong> を選択します</li>
-      <li>ビルトインルール（<code>devour.jp</code> → <code>#content</code>）に基づき、このページの <code>&lt;main id="content"&gt;</code> のテキストがコピーされます</li>
-      <li>拡張アイコンに <strong>"P"</strong> バッジが表示されます</li>
+      <li>ビルトインルール（<code>devour.jp</code> → <code>#content</code>）に基づき、テキストがクリップボードにコピーされます</li>
+      <li>成功すると緑色の <strong>"OK"</strong> バッジが表示されます</li>
     </ol>
 
     <h2>方法 C: 右クリック → Copy element innerText</h2>
@@ -48,32 +49,29 @@
     <ol>
       <li>コピーしたい要素（例: この段落）を<strong>右クリック</strong>します</li>
       <li>コンテキストメニューから <strong>"Copy element innerText"</strong> を選択します</li>
-      <li>右クリックした要素の innerText がコピーされます</li>
-      <li>拡張アイコンに <strong>"P"</strong> バッジが表示されます</li>
+      <li>右クリックした要素の innerText がクリップボードにコピーされます</li>
+      <li>成功すると緑色の <strong>"OK"</strong> バッジが表示されます</li>
     </ol>
 
-    <h2>ペースト（共通）</h2>
-    <p>上記 A / B / C いずれかでコピーした後、以下の手順でペーストします。</p>
-    <ol>
-      <li>下のテキストエリアをクリックして<strong>フォーカス</strong>します</li>
-      <li>ツールバーの<strong>拡張アイコンをクリック</strong>します</li>
-      <li>コピーしたテキストがテキストエリアに<strong>ペースト</strong>されます</li>
-      <li>"P" バッジが消え、待機状態に戻ります</li>
-    </ol>
+    <h2>ペースト</h2>
+    <p>上記 A / B / C いずれかでコピーした後、以下の方法でペーストできます。</p>
+    <ul>
+      <li><strong>Ctrl+V</strong>（Mac: <strong>Cmd+V</strong>）で任意のアプリケーションにペースト</li>
+      <li>右クリック → <strong>「貼り付け」</strong> でペースト</li>
+    </ul>
+    <p>下のテキストエリアで動作を確認できます。</p>
 
     <h2>テスト用テキストエリア</h2>
-    <p>ペースト先として使用してください。</p>
-    <textarea id="testArea" rows="12" style="width: 100%; font-family: inherit; font-size: 0.9rem; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); resize: vertical;" placeholder="ここにペーストされます"></textarea>
+    <textarea id="testArea" rows="12" style="width: 100%; font-family: inherit; font-size: 0.9rem; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); resize: vertical;" placeholder="ここにペーストしてください（Ctrl+V / Cmd+V）"></textarea>
     <p style="margin-top: 0.5rem;">
       <button onclick="document.getElementById('testArea').value=''" style="padding: 6px 16px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text); cursor: pointer; font-size: 0.85rem;">Clear</button>
     </p>
 
     <h2>確認ポイント</h2>
     <ul>
-      <li>方法 A / B / C それぞれでコピーが成功すること</li>
-      <li>コピー後、"P" バッジが表示されペースト待機状態になること</li>
-      <li>テキストエリアにフォーカス後、アイコンクリックでペーストされること</li>
-      <li>ペースト完了後、"P" バッジが消えて待機状態に戻ること</li>
+      <li>方法 A / B / C それぞれで緑色の "OK" バッジが表示されること</li>
+      <li>コピー後、テキストエリアに Ctrl+V でペーストできること</li>
+      <li>全ての処理がブラウザ内で完結し、外部への通信が発生しないこと</li>
     </ul>
   </main>
 
