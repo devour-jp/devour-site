@@ -115,6 +115,11 @@ code {
   border-radius: 6px;
 }
 
+.purpose-detail {
+  font-size: 0.88rem;
+  color: var(--color-text-sub);
+}
+
 .last-verified {
   font-size: 0.82rem;
   color: var(--color-text-sub);
