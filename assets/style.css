@@ -281,6 +281,7 @@ footer a {
 .footer-breadcrumb img {
   width: 14px;
   height: 14px;
+  vertical-align: middle;
 }
 
 .footer-breadcrumb a {

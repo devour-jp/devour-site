@@ -18,6 +18,11 @@
 <body>
   <main id="content">
     <h1>devour browser tools</h1>
+    <span class="badges">
+      <span class="badge badge-category">Chrome Extension</span>
+      <span class="badge badge-status-coming">In Review</span>
+      <span class="badge badge-version">v1.0.0</span>
+    </span>
     <p>デスクトップ版 Chrome 専用の拡張機能です。</p>
 
     <h2>概要</h2>
@@ -72,6 +77,16 @@
       <li>Manifest V3</li>
     </ul>
     <p>モバイル版 Chrome には対応していません。</p>
+
+    <h2>使用する権限</h2>
+    <ul>
+      <li><code>host_permissions</code>: ドメインごとのコピー対象管理に必要です。取得した情報は端末外に送信されません。</li>
+      <li><code>storage</code>: ルール設定の保存に使用します。</li>
+      <li><code>activeTab</code> / <code>scripting</code>: アクティブなタブでのコピー操作に必要です。</li>
+      <li><code>contextMenus</code>: 右クリックメニューからのコピー操作に必要です。</li>
+      <li><code>clipboardWrite</code> / <code>offscreen</code>: テキストのクリップボード書き込みに使用します。</li>
+      <li><code>webNavigation</code>: Zenn Web Editor ブロックのページ遷移検知に必要です。</li>
+    </ul>
 
     <h2>インストール</h2>
     <p>Chrome Web Store 審査中です。公開され次第、こちらにリンクを掲載します。</p>
