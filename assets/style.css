@@ -223,13 +223,32 @@ footer a {
   color: var(--color-footer);
 }
 
-.footer-logo {
-  margin-bottom: 4px;
+.footer-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
 }
 
-.footer-logo img {
-  width: 16px;
-  height: 16px;
+.footer-breadcrumb img {
+  width: 14px;
+  height: 14px;
+}
+
+.footer-breadcrumb a {
+  color: var(--color-text-sub);
+  text-decoration: none;
+}
+
+.footer-breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.footer-breadcrumb .sep {
+  margin: 0 0.4em;
+  color: var(--color-footer);
 }
 
 .footer-copyright {
