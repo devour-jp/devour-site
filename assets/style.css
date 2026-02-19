@@ -105,6 +105,26 @@ code {
   color: var(--color-text-sub);
 }
 
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--color-text-sub);
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: var(--color-text-sub);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb .sep {
+  margin: 0 0.4em;
+}
+
 /* Badges */
 .badges {
   display: flex;
