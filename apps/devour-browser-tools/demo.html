@@ -44,12 +44,17 @@
       <li>成功すると緑色の <strong>"OK"</strong> バッジが表示されます</li>
     </ol>
 
-    <h2>方法 C: 右クリック → Copy element innerText</h2>
-    <p>右クリックした要素のテキストを直接コピーする方法です。</p>
+    <h2>方法 C: 右クリック → Copy element innerText / innerHTML</h2>
+    <p>右クリックした要素のテキストまたは HTML を直接コピーする方法です。</p>
     <ol>
       <li>コピーしたい要素（例: この段落）を<strong>右クリック</strong>します</li>
-      <li>コンテキストメニューから <strong>"Copy element innerText"</strong> を選択します</li>
-      <li>右クリックした要素の innerText がクリップボードにコピーされます</li>
+      <li>コンテキストメニューから以下のいずれかを選択します：
+        <ul>
+          <li><strong>"Copy element innerText"</strong> — テキストコンテンツをコピー</li>
+          <li><strong>"Copy element innerHTML"</strong> — HTML マークアップをコピー</li>
+        </ul>
+      </li>
+      <li>右クリックした要素の内容がクリップボードにコピーされます</li>
       <li>成功すると緑色の <strong>"OK"</strong> バッジが表示されます</li>
     </ol>
 
@@ -68,9 +73,29 @@
       <span style="font-size: 0.82rem; color: var(--color-text-sub);">テキストエリアとクリップボードの内容をクリアします。</span>
     </div>
 
+    <h2>方法 D: 右クリック → Options</h2>
+    <p>コンテキストメニューからオプション画面を開く方法です。</p>
+    <ol>
+      <li>任意の要素を<strong>右クリック</strong>します</li>
+      <li>コンテキストメニューから <strong>"Options"</strong> を選択します</li>
+      <li>オプション画面が新しいタブで開きます</li>
+      <li>Domain 欄に <code>devour.jp</code>、Selector 欄に右クリック位置の要素セレクタが自動入力されていることを確認します</li>
+    </ol>
+
+    <h2>Zenn Web Editor ブロック</h2>
+    <p>Zenn の編集機能をブロックする機能のテストです。</p>
+    <ol>
+      <li><a href="https://zenn.dev/articles/example-slug/edit" target="_blank" rel="noopener">https://zenn.dev/articles/example-slug/edit</a> にアクセスします</li>
+      <li><code>https://zenn.dev</code> にリダイレクトされることを確認します</li>
+      <li>Zenn ダッシュボード上の「記事を作成」「編集する」ボタンがグレーアウトされていることを確認します</li>
+    </ol>
+    <p>※ Zenn にログイン済みの場合のみ確認できます。オプション画面の Feature Toggles で無効化も可能です。</p>
+
     <h2>確認ポイント</h2>
     <ul>
       <li>方法 A / B / C それぞれで緑色の "OK" バッジが表示されること</li>
+      <li>方法 C で innerText と innerHTML の結果が異なること（HTML タグの有無）</li>
+      <li>方法 D で Options 画面にドメインとセレクタが自動入力されること</li>
       <li>コピー後、テキストエリアに Ctrl+V でペーストできること</li>
       <li>全ての処理がブラウザ内で完結し、外部への通信が発生しないこと</li>
     </ul>
