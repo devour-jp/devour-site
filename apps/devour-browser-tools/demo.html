@@ -108,6 +108,30 @@
         <li>Domain 欄に <code>devour.jp</code>、Selector 欄に右クリック位置の要素セレクタが自動入力されていることを確認します</li>
       </ol>
 
+      <h2>方法 C テストデータ</h2>
+      <p>以下の枠内を右クリックして、<strong>innerText</strong> と <strong>innerHTML</strong> の違いを確認できます。</p>
+      <div style="padding: 1rem; border: 2px solid var(--color-border); border-radius: 6px; margin-bottom: 1rem;">
+        <p style="margin-bottom: 0;">devour の公式サイトは <a href="https://devour.jp/">https://devour.jp/</a> です。<strong>太字</strong>や<code>コード</code>を含むテキストで、innerText と innerHTML の差が確認できます。</p>
+      </div>
+      <table style="width: 100%; font-size: 0.85rem; border-collapse: collapse; margin-bottom: 1rem;">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid var(--color-border);">操作</th>
+            <th style="text-align: left; padding: 0.4rem 0.6rem; border-bottom: 2px solid var(--color-border);">コピーされる内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border);">Copy element innerText</td>
+            <td style="padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border);"><code>devour の公式サイトは https://devour.jp/ です。太字やコードを含む…</code></td>
+          </tr>
+          <tr>
+            <td style="padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border);">Copy element innerHTML</td>
+            <td style="padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--color-border);"><code>devour の公式サイトは &lt;a href=&quot;…&quot;&gt;…&lt;/a&gt; です。&lt;strong&gt;太字&lt;/strong&gt;…</code></td>
+          </tr>
+        </tbody>
+      </table>
+
       <h2>ペースト</h2>
       <p>上記 A / B / C いずれかでコピーした後、以下の方法でペーストできます。</p>
       <ul>
