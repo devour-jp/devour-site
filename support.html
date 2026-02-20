@@ -15,14 +15,32 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="has-header">
+  <header class="site-header">
+    <a href="/" class="site-header-brand"><img src="/assets/favicon.png" alt="">DEVOUR</a>
+    <button class="site-header-menu-btn" onclick="document.querySelector('.site-header-nav').classList.toggle('open')" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="site-header-nav">
+    <h3>Apps</h3>
+    <ul><li><a href="/apps/devour-browser-tools/">devour browser tools</a></li></ul>
+    <h3>Support</h3>
+    <ul><li><a href="/support">Support</a></li></ul>
+    <h3>Legal</h3>
+    <ul><li><a href="/privacy">Privacy Policy</a></li></ul>
+  </nav>
   <main id="content">
     <h1>Support</h1>
     <p>DEVOUR ソフトウェアに関するサポート情報です。</p>
 
     <h2>お問い合わせ</h2>
-    <p>バグ報告・ご質問・ご要望は以下のメールアドレスまでご連絡ください。</p>
-    <p><a href="mailto:support@devour.jp?subject=サポート お問い合わせ&body=お問い合わせ種別: バグ報告 / ご質問 / ご要望 / その他%0A%0A内容:%0A">support@devour.jp</a></p>
+    <p>お問い合わせには AI による一次回答を行う場合があります。個人開発のため、内容によっては対応や回答をいたしかねる場合がございます。あらかじめご了承ください。</p>
+    <p>以下からお問い合わせ内容に合ったテンプレートをお選びください。</p>
+    <ul>
+      <li><a href="mailto:support@devour.jp?subject=バグ報告&body=お問い合わせ種別: バグ報告%0A%0A内容:%0A">バグ報告</a></li>
+      <li><a href="mailto:support@devour.jp?subject=ご質問&body=お問い合わせ種別: ご質問%0A%0A内容:%0A">ご質問</a></li>
+      <li><a href="mailto:support@devour.jp?subject=ご要望&body=お問い合わせ種別: ご要望%0A%0A内容:%0A">ご要望</a></li>
+      <li><a href="mailto:support@devour.jp?subject=お問い合わせ&body=お問い合わせ種別: その他%0A%0A内容:%0A">その他</a></li>
+    </ul>
 
     <h2>ソフトウェア別のサポート</h2>
     <ul>
@@ -30,12 +48,7 @@
     </ul>
 
     <h2>FAQ</h2>
-
-    <h3>Q: ソフトウェアが通信を行うことはありますか？</h3>
-    <p>いいえ。DEVOUR のソフトウェアはローカル完結で動作し、外部サーバーへの通信は行いません。</p>
-
-    <h3>Q: データはどこに保存されますか？</h3>
-    <p>すべてのデータはお使いの端末内にのみ保存されます。</p>
+    <p>掲載予定。</p>
   </main>
 
   <footer>
@@ -50,9 +63,8 @@
       <div>
         <h3>Support</h3>
         <ul>
-          <li><a href="support">FAQ</a></li>
-          <li><a href="mailto:support@devour.jp?subject=お問い合わせ">support@devour.jp</a></li>
-        </ul>
+          <li><a href="support">Support</a></li>
+                  </ul>
       </div>
       <div>
         <h3>Legal</h3>
@@ -61,7 +73,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer-copyright"><a href="/">&copy; DEVOUR&trade;</a></p>
+    <p class="footer-copyright"><a href="/">&copy; DEVOUR</a></p>
   </footer>
 </body>
 </html>

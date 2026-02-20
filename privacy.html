@@ -15,7 +15,19 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="has-header">
+  <header class="site-header">
+    <a href="/" class="site-header-brand"><img src="/assets/favicon.png" alt="">DEVOUR</a>
+    <button class="site-header-menu-btn" onclick="document.querySelector('.site-header-nav').classList.toggle('open')" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="site-header-nav">
+    <h3>Apps</h3>
+    <ul><li><a href="/apps/devour-browser-tools/">devour browser tools</a></li></ul>
+    <h3>Support</h3>
+    <ul><li><a href="/support">Support</a></li></ul>
+    <h3>Legal</h3>
+    <ul><li><a href="/privacy">Privacy Policy</a></li></ul>
+  </nav>
   <main id="content">
     <h1>Privacy Policy</h1>
     <p>DEVOUR が提供するソフトウェアおよびサービスのプライバシーポリシーです。</p>
@@ -41,9 +53,8 @@
       <div>
         <h3>Support</h3>
         <ul>
-          <li><a href="support">FAQ</a></li>
-          <li><a href="mailto:support@devour.jp?subject=お問い合わせ">support@devour.jp</a></li>
-        </ul>
+          <li><a href="support">Support</a></li>
+                  </ul>
       </div>
       <div>
         <h3>Legal</h3>
@@ -52,7 +63,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer-copyright"><a href="/">&copy; DEVOUR&trade;</a></p>
+    <p class="footer-copyright"><a href="/">&copy; DEVOUR</a></p>
   </footer>
 </body>
 </html>
