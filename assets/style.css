@@ -355,12 +355,12 @@ figcaption {
 }
 
 .site-header-nav h3 {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-text-sub);
+  color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 1rem 0 0.4rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .site-header-nav h3:first-child {
@@ -378,9 +378,9 @@ figcaption {
 }
 
 .site-header-nav a {
-  color: var(--color-text);
+  color: var(--color-text-sub);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
 }
 
 .site-header-nav a:hover {
