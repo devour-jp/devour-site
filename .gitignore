@@ -12,3 +12,17 @@ node_modules/
 # Build output
 dist/
 build/
+
+# Binary assets — real files are in devour-assets-internal
+# New symlinks: use `git add -f` to track
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.ttf
+*.otf
+*.dll
+*.wav
+*.mp3
+*.ogg

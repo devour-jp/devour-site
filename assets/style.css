@@ -455,3 +455,42 @@ footer a {
 .footer-copyright a:hover {
   color: var(--color-accent);
 }
+
+/* FAQ Accordion */
+.faq-list {
+  margin-bottom: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item summary {
+  padding: 0.7rem 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  list-style: none;
+}
+
+.faq-item summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 0.7em;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  padding: 0 0 0.8rem 1.2em;
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+}
+
+.faq-answer p {
+  margin-bottom: 0.3rem;
+}
