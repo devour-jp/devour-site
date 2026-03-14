@@ -15,14 +15,20 @@ build/
 
 # Binary assets — real files are in devour-assets-internal
 # New symlinks: use `git add -f` to track
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.webp
 *.ttf
 *.otf
 *.dll
 *.wav
 *.mp3
 *.ogg
+
+# Images: default ignore, allow site assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+!assets/**/*.png
+!assets/**/*.jpg
+!apps/**/images/**/*.png
+!apps/**/images/**/*.jpg
