@@ -1,3 +1,107 @@
+# --- Demo Projects (sample data) ---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: taskflow
+  description: "シンプルで高速なタスク管理アプリ。ドラッグ&ドロップでカンバンボード操作。"
+  tags:
+    - react
+    - typescript
+    - pwa
+    - productivity
+  links:
+    - url: https://github.com/example/taskflow
+      title: GitHub
+    - url: https://taskflow.example.com
+      title: Demo
+  annotations:
+    devour.jp/version: "2.1.0"
+    devour.jp/updated-at: "2026-03-21"
+    devour.jp/headline: "リアルタイム共同編集に対応"
+    devour.jp/comment: "週末ハッカソンから生まれたアプリが2年続いてます"
+    devour.jp/image: "https://placehold.co/600x300/3b82f6/ffffff?text=Taskflow+Kanban+Board"
+spec:
+  type: website
+  lifecycle: production
+  owner: indie-dev-a
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: md-press
+  description: "Markdown ファイルからブログを生成する静的サイトジェネレーター。ゼロコンフィグで即公開。"
+  tags:
+    - rust
+    - markdown
+    - ssg
+    - blog
+  links:
+    - url: https://github.com/example/md-press
+      title: GitHub
+    - url: https://md-press.example.com
+      title: Website
+  annotations:
+    devour.jp/version: "0.9.0"
+    devour.jp/updated-at: "2026-03-15"
+    devour.jp/headline: "シンタックスハイライト刷新（Shiki 統合）"
+    devour.jp/comment: "自分のブログのために作ったら意外と使われ始めた"
+    devour.jp/image: "https://placehold.co/600x300/10b981/ffffff?text=md-press+Blog+Engine"
+spec:
+  type: tool
+  lifecycle: production
+  owner: indie-dev-b
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: dotkeeper
+  description: "dotfiles を Git で管理する CLI ツール。stow 不要、シンボリックリンクを自動生成。"
+  tags:
+    - go
+    - cli
+    - dotfiles
+    - devtools
+  links:
+    - url: https://github.com/example/dotkeeper
+      title: GitHub
+  annotations:
+    devour.jp/version: "1.4.2"
+    devour.jp/updated-at: "2026-02-28"
+    devour.jp/headline: "XDG Base Directory 完全対応"
+    devour.jp/comment: "新しい PC をセットアップするたびに感謝される"
+spec:
+  type: tool
+  lifecycle: production
+  owner: indie-dev-c
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: pomo-kun
+  description: "かわいいキャラと一緒に集中する、ポモドーロタイマーアプリ。iOS / Android 対応。"
+  tags:
+    - swift
+    - ios
+    - android
+    - pomodoro
+    - productivity
+  links:
+    - url: https://github.com/example/pomo-kun
+      title: GitHub
+    - url: https://apps.apple.com/example/pomo-kun
+      title: App Store
+  annotations:
+    devour.jp/version: "3.0.0"
+    devour.jp/updated-at: "2026-03-20"
+    devour.jp/headline: "ウィジェット対応 + キャラクター追加"
+    devour.jp/comment: "ポモドーロ中に話しかけてくるキャラが好評です"
+    devour.jp/image: "https://placehold.co/600x300/f59e0b/ffffff?text=pomo-kun+Timer"
+spec:
+  type: website
+  lifecycle: production
+  owner: indie-dev-d
+---
+# --- Real Projects ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
