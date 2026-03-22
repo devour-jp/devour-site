@@ -1,0 +1,71 @@
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: kokosuki
+  description: "散歩×命名アプリ。子どもと歩いた場所に名前をつけて記録する iOS / Android アプリ。"
+  tags:
+    - unity
+    - ios
+    - android
+    - kids
+    - walking
+  links:
+    - url: https://github.com/devour-jp/devour-pg6
+      title: GitHub
+  annotations:
+    devour.jp/version: "0.39.0"
+    devour.jp/updated-at: "2026-02-16"
+    devour.jp/headline: "看板UI + メッセージシナリオ + バケツUI"
+    devour.jp/comment: "子どもと一緒に街を探検しよう"
+spec:
+  type: game
+  lifecycle: production
+  owner: devour-jp
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: promotion-dashboard
+  description: "GitHub リポジトリの更新情報を集約するカード型ダッシュボード。"
+  tags:
+    - typescript
+    - hono
+    - ssr
+    - dashboard
+  links:
+    - url: https://github.com/devour-jp/devour-site
+      title: GitHub
+    - url: https://devour.jp
+      title: Website
+  annotations:
+    devour.jp/version: "0.3.0"
+    devour.jp/updated-at: "2026-03-22"
+    devour.jp/headline: "ビジュアル強化 + サイト導線プロトタイプ"
+    devour.jp/comment: "個人開発プロジェクトを一覧で見られるダッシュボード"
+spec:
+  type: website
+  lifecycle: experimental
+  owner: devour-jp
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: devour-site
+  description: "devour 公式サイト。サポート・プライバシーポリシー・アプリ情報を掲載。"
+  tags:
+    - typescript
+    - hono
+    - static-site
+  links:
+    - url: https://github.com/devour-jp/devour-site
+      title: GitHub
+    - url: https://devour.jp
+      title: Website
+  annotations:
+    devour.jp/updated-at: "2026-03-22"
+    devour.jp/headline: "公式サイト運用中"
+    devour.jp/comment: "devour プロジェクトのホーム"
+spec:
+  type: docs
+  lifecycle: production
+  owner: devour-jp
