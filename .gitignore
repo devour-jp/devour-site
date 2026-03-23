@@ -34,3 +34,5 @@ build/
 !public/assets/**/*.jpg
 !apps/**/images/**/*.png
 !apps/**/images/**/*.jpg
+!apps/**/promotion/**/*.png
+!apps/**/promotion/**/*.jpg
