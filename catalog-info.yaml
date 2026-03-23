@@ -159,7 +159,7 @@ spec:
       next:
         version: "1.0.1"
         date: "2026-03-25"
-        headline: "owner単位ページ表示"
+        headline: "owner単位ページ表示、スマホ最適化"
     author:
       comment: "とりあえず、MVPっぽいものは完成"
 ---
