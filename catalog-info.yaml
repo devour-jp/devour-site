@@ -114,7 +114,6 @@ metadata:
     - kids
     - walking
   links:
-    - url: https://github.com/devour-jp/devour-pg6
     - url: https://apps.apple.com/us/app/%E3%81%93%E3%81%93%E3%81%99%E3%81%8D/id6760634470
 spec:
   type: game
@@ -154,11 +153,11 @@ spec:
       fg: "#E2E8F0"
     release:
       current:
-        version: "0.5.1"
+        version: "1.0.0"
         date: "2026-03-23"
         headline: "UI刷新・ウォークスルー・利用規約・プレビューツール"
     author:
-      comment: "個人開発プロジェクトを一覧で見られる"
+      comment: "とりあえず、MVPっぽいものは完成。"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
