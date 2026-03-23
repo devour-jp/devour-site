@@ -135,7 +135,7 @@ spec:
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
-  name: promotion-dashboard
+  name: creators-dashboard
   description: "更新情報を集約するカード型ダッシュボード。"
   tags:
     - typescript
