@@ -19,7 +19,7 @@ metadata:
     devour.jp/updated-at: "2026-03-21"
     devour.jp/headline: "リアルタイム共同編集に対応"
     devour.jp/comment: "週末ハッカソンから生まれたアプリが2年続いてます"
-    devour.jp/image: "https://placehold.co/600x300/3b82f6/ffffff?text=Taskflow+Kanban+Board"
+    devour.jp/image: "/static/images/placeholders/taskflow.png"
 spec:
   type: website
   lifecycle: production
@@ -45,7 +45,7 @@ metadata:
     devour.jp/updated-at: "2026-03-15"
     devour.jp/headline: "シンタックスハイライト刷新（Shiki 統合）"
     devour.jp/comment: "自分のブログのために作ったら意外と使われ始めた"
-    devour.jp/image: "https://placehold.co/600x300/10b981/ffffff?text=md-press+Blog+Engine"
+    devour.jp/image: "/static/images/placeholders/md-press.png"
 spec:
   type: tool
   lifecycle: production
@@ -95,7 +95,7 @@ metadata:
     devour.jp/updated-at: "2026-03-20"
     devour.jp/headline: "ウィジェット対応 + キャラクター追加"
     devour.jp/comment: "ポモドーロ中に話しかけてくるキャラが好評です"
-    devour.jp/image: "https://placehold.co/600x300/f59e0b/ffffff?text=pomo-kun+Timer"
+    devour.jp/image: "/static/images/placeholders/pomo-kun.png"
 spec:
   type: website
   lifecycle: production
@@ -156,8 +156,12 @@ spec:
         version: "1.0.0"
         date: "2026-03-23"
         headline: "UI刷新・ウォークスルー・利用規約・プレビューツール"
+      next:
+        version: "1.0.1"
+        date: "2026-03-25"
+        headline: "owner単位ページ表示"
     author:
-      comment: "とりあえず、MVPっぽいものは完成。"
+      comment: "とりあえず、MVPっぽいものは完成"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
