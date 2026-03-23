@@ -34,5 +34,3 @@ build/
 !public/assets/**/*.jpg
 !apps/**/images/**/*.png
 !apps/**/images/**/*.jpg
-!images/**/*.png
-!images/**/*.jpg
