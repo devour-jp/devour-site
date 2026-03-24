@@ -153,13 +153,13 @@ spec:
       fg: "#E2E8F0"
     release:
       current:
-        version: "1.0.0"
-        date: "2026-03-23"
-        headline: "UI刷新・ウォークスルー・利用規約・プレビューツール"
-      next:
         version: "1.0.1"
-        date: "2026-03-25"
-        headline: "owner単位ページ表示、スマホ最適化"
+        date: "2026-03-24"
+        headline: "(暫定)owner単位ページ表示、スマホ最適化"
+      next:
+        version: "1.0.2"
+        date: "2026-03-29"
+        headline: "更新頻度調整"
     author:
       comment: "とりあえず、MVPっぽいものは完成"
 ---
