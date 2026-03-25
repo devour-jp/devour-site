@@ -115,11 +115,14 @@ metadata:
     - walking
   links:
     - url: https://apps.apple.com/us/app/%E3%81%93%E3%81%93%E3%81%99%E3%81%8D/id6760634470
+    - url: https://devour.jp/apps/kokosuki/
+      title: 公式サイト
 spec:
   type: game
   lifecycle: production
   owner: devour-jp
   devour:
+    image: "https://devour.jp/apps/kokosuki/promotion/ogp_1200x630.png"
     card:
       bg: "#4CAF50"
       fg: "#FFFFFF"
