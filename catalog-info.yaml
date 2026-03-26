@@ -133,6 +133,10 @@ spec:
         headline: "フィルター改善 + メッセージ文言改善"
     author:
       comment: "子どもと一緒に街を探検しよう"
+    social:
+      x: "DEVOUR_JP"
+      x_scope:
+        - embed
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
