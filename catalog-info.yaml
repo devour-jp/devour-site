@@ -164,15 +164,8 @@ spec:
         long: "子ども向けアプリと開発ツールを作っています。\n\n主なプロジェクトは「ここすき」（散歩×命名アプリ）と「Creators Dashboard」（個人開発者向けダッシュボード）です。\n\nここすき は子どもと一緒に街を歩いて、お気に入りの場所に名前をつけて記録できるアプリです。位置情報はプライバシーに配慮し、自宅からの相対値として保存しています。\n\nCreators Dashboard は GitHub リポジトリに YAML ファイルを置くだけで、プロジェクトの最新情報がカード型 UI で一覧表示されます。\n\n技術ブログは Zenn と note で発信中です。"
       links:
         - url: https://github.com/devour-jp
-        - url: https://apps.apple.com/developer/devour/id123
-        - url: https://play.google.com/store/apps/dev?id=devour
-        - url: https://youtube.com/@devour
-        - url: https://store.steampowered.com/developer/devour
-        - url: https://x.com/DEVOUR_JP
-        - url: https://discord.gg/devour
-        - url: https://bsky.app/profile/devour.jp
-        - url: https://zenn.dev/devour
-        - url: https://note.com/devour
+        - url: https://zenn.dev/nonamecode
+        - url: https://note.com/namelesscode
         - url: https://devour.jp
           title: 公式サイト
       social:
