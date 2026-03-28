@@ -3,82 +3,104 @@ apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: taskflow
-  description: "シンプルで高速なタスク管理アプリ。ドラッグ&ドロップでカンバンボード操作。"
+  description:
+    short: "シンプルで高速なタスク管理アプリ。ドラッグ&ドロップでカンバンボード操作。"
+    long: "TaskFlow は個人やチームのタスク管理を効率化する Web アプリケーションです。\n直感的なドラッグ&ドロップでカンバンボードを操作でき、リアルタイム共同編集にも対応。\nPWA として動作するため、オフラインでもタスクの確認・編集が可能です。"
   tags:
     - react
     - typescript
     - pwa
     - productivity
+    - kanban
+    - collaboration
+    - offline
+    - cloudflare
+    - hono
+    - realtime
   links:
     - url: https://github.com/example/taskflow
-      title: GitHub
-    - url: https://taskflow.example.com
-      title: Demo
-  annotations:
-    devour.jp/version: "2.1.0"
-    devour.jp/updated-at: "2026-03-21"
-    devour.jp/headline: "リアルタイム共同編集に対応"
-    devour.jp/comment: "週末ハッカソンから生まれたアプリが2年続いてます"
-    devour.jp/image: "/static/images/placeholders/taskflow.png"
+    - url: https://apps.apple.com/example/taskflow
+    - url: https://play.google.com/store/apps/details?id=example.taskflow
+    - url: https://youtube.com/watch?v=example
+    - url: https://store.steampowered.com/app/12345
+    - url: https://x.com/example
+    - url: https://discord.gg/example
+    - url: https://bsky.app/profile/example
+    - url: https://zenn.dev/example
+    - url: https://note.com/example
+    - url: https://example.com
+      title: 公式サイト
 spec:
   type: website
   lifecycle: production
-  owner: indie-dev-a
+  owner: devour-jp
+  devour:
+    card:
+      bg: "#6366f1"
+      fg: "#ffffff"
+    category: "productivity"
+    release:
+      current:
+        version: "2.1.0"
+        date: "2026-03-21"
+        headline:
+          short: "リアルタイム共同編集に対応"
+          long: "リアルタイム共同編集に対応しました。\n複数人で同時にカンバンボードを操作できます。WebSocket による低遅延の同期を実現。"
+      next:
+        version: "2.2.0"
+        date: "2026-04-15"
+        headline:
+          short: "ガントチャートビュー追加"
+          long: "ガントチャートビューを追加予定です。\nタスクの期間と依存関係を視覚的に表示。プロジェクト管理がさらに便利になります。"
+    author:
+      comment:
+        short: "テストデータです。"
+        long: "テストデータです。\n実際のプロジェクトではありませんが、全フィールドの表示確認用として使用しています。"
+    social:
+      x:
+        account: "DEVOUR_JP"
+        fix: "2037208350895812662"
+        latest:
+          query: ""
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: md-press
-  description: "Markdown ファイルからブログを生成する静的サイトジェネレーター。ゼロコンフィグで即公開。"
+  description:
+    short: "Markdown ファイルからブログを生成する静的サイトジェネレーター。ゼロコンフィグで即公開。"
   tags:
     - rust
     - markdown
     - ssg
     - blog
-  links:
-    - url: https://github.com/example/md-press
-      title: GitHub
-    - url: https://md-press.example.com
-      title: Website
-  annotations:
-    devour.jp/version: "0.9.0"
-    devour.jp/updated-at: "2026-03-15"
-    devour.jp/headline: "シンタックスハイライト刷新（Shiki 統合）"
-    devour.jp/comment: "自分のブログのために作ったら意外と使われ始めた"
-    devour.jp/image: "/static/images/placeholders/md-press.png"
 spec:
   type: tool
   lifecycle: production
-  owner: indie-dev-b
+  owner: devour-jp
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: dotkeeper
-  description: "dotfiles を Git で管理する CLI ツール。stow 不要、シンボリックリンクを自動生成。"
+  description:
+    short: "dotfiles を Git で管理する CLI ツール。stow 不要、シンボリックリンクを自動生成。"
   tags:
     - go
     - cli
     - dotfiles
     - devtools
-  links:
-    - url: https://github.com/example/dotkeeper
-      title: GitHub
-  annotations:
-    devour.jp/version: "1.4.2"
-    devour.jp/updated-at: "2026-02-28"
-    devour.jp/headline: "XDG Base Directory 完全対応"
-    devour.jp/comment: "新しい PC をセットアップするたびに感謝される"
 spec:
   type: tool
   lifecycle: production
-  owner: indie-dev-c
+  owner: devour-jp
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: pomo-kun
-  description: "かわいいキャラと一緒に集中する、ポモドーロタイマーアプリ。iOS / Android 対応。"
+  description:
+    short: "かわいいキャラと一緒に集中する、ポモドーロタイマーアプリ。iOS / Android 対応。"
   tags:
     - swift
     - ios
@@ -86,27 +108,20 @@ metadata:
     - pomodoro
     - productivity
   links:
-    - url: https://github.com/example/pomo-kun
-      title: GitHub
     - url: https://apps.apple.com/example/pomo-kun
-      title: App Store
-  annotations:
-    devour.jp/version: "3.0.0"
-    devour.jp/updated-at: "2026-03-20"
-    devour.jp/headline: "ウィジェット対応 + キャラクター追加"
-    devour.jp/comment: "ポモドーロ中に話しかけてくるキャラが好評です"
-    devour.jp/image: "/static/images/placeholders/pomo-kun.png"
 spec:
   type: website
   lifecycle: production
-  owner: indie-dev-d
+  owner: devour-jp
 ---
 # --- Real Projects ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: kokosuki
-  description: "ここすき 散歩×命名アプリ。子どもと歩いた場所に名前をつけて記録。"
+  description:
+    short: "ここすき 散歩×命名アプリ。子どもと歩いた場所に名前をつけて記録。"
+    long: "ここすき は散歩×命名アプリです。子どもと一緒に街を歩いて、お気に入りの場所に自分だけの名前をつけて記録できます。\n位置情報はプライバシーに配慮し、自宅からの相対値として保存。iOS 向けに Swift / SwiftUI で開発しています。"
   tags:
     - unity
     - ios
@@ -130,24 +145,57 @@ spec:
       current:
         version: "1.0.1"
         date: "2026-03-23"
-        headline: "フィルター改善 + メッセージ文言改善"
+        headline:
+          short: "フィルター改善 + メッセージ文言改善"
+          long: "フィルター改善＋メッセージ文言改善を実施しました。\n地図フィルターの応答速度を向上させ、子ども向けのメッセージ表現をひらがな中心に統一しています。"
     author:
-      comment: "子どもと一緒に街を探検しよう"
+      comment:
+        short: "子どもと一緒に街を探検しよう"
+        long: "子どもと一緒に街を探検しよう！\n名前をつけた場所が増えていくと、自分だけの地図ができあがります。親子の思い出を残すツールとしても使ってほしいです。"
     social:
-      x: "DEVOUR_JP"
-      x_scope:
-        - embed
+      x:
+        account: "DEVOUR_JP"
+        fix: "2037208350895812662"
+        latest:
+          query: "ここすき"
+    org:
+      bio:
+        short: "子ども向けアプリと開発ツールを作ってます。街を歩いて名前をつけるアプリ「ここすき」、個人開発のダッシュボード「Creators Dashboard」を開発中。"
+        long: "子ども向けアプリと開発ツールを作っています。\n\n主なプロジェクトは「ここすき」（散歩×命名アプリ）と「Creators Dashboard」（個人開発者向けダッシュボード）です。\n\nここすき は子どもと一緒に街を歩いて、お気に入りの場所に名前をつけて記録できるアプリです。位置情報はプライバシーに配慮し、自宅からの相対値として保存しています。\n\nCreators Dashboard は GitHub リポジトリに YAML ファイルを置くだけで、プロジェクトの最新情報がカード型 UI で一覧表示されます。\n\n技術ブログは Zenn と note で発信中です。"
+      links:
+        - url: https://github.com/devour-jp
+        - url: https://apps.apple.com/developer/devour/id123
+        - url: https://play.google.com/store/apps/dev?id=devour
+        - url: https://youtube.com/@devour
+        - url: https://store.steampowered.com/developer/devour
+        - url: https://x.com/DEVOUR_JP
+        - url: https://discord.gg/devour
+        - url: https://bsky.app/profile/devour.jp
+        - url: https://zenn.dev/devour
+        - url: https://note.com/devour
+        - url: https://devour.jp
+          title: 公式サイト
+      social:
+        x:
+          account: "DEVOUR_JP"
+          fix: "2037208350895812662"
+          latest:
+            query: ""
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: creators-dashboard
-  description: "更新情報を集約するカード型ダッシュボード。"
+  description:
+    short: "更新情報を集約するカード型ダッシュボード。"
+    long: "GitHub リポジトリの更新情報をカード型 UI で一覧表示する個人開発ダッシュボードです。\ncatalog-info.yaml を配置するだけでリリース情報・作者コメント・ストアリンクなどリッチな情報を表示できます。"
   tags:
     - typescript
     - hono
     - ssr
     - dashboard
+  links:
+    - url: https://github.com/devour-jp/devour-site
 spec:
   type: website
   lifecycle: experimental
@@ -158,25 +206,33 @@ spec:
       fg: "#E2E8F0"
     release:
       current:
-        version: "1.2.0"
-        date: "2026-03-27"
-        headline: "ウオッチ追加、X投稿追加(1org,1post)"
-      next:
         version: "1.3.0"
         date: "2026-03-28"
-        headline: "org単位表示機能追加"
+        headline:
+          short: "org ページ + TextPair + social 再設計"
+          long: "org ページ（開発者ポートフォリオ）を新設しました。\nプロフィール・外部リンク・X 投稿（fix / latest）をまとめて表示。テキスト項目は short / long の2段階で、org ページではより詳しい情報を複数行で表示できます。"
     author:
-      comment: "X投稿表示できる様にした"
+      comment:
+        short: "少しずつ桜が咲いてきたように感じます"
+    social:
+      x:
+        account: "DEVOUR_JP"
+        fix: "2037208350895812662"
+        latest:
+          query: "Creators Dashboard"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
   name: devour-site
-  description: "devour 公式サイト。サポート・アプリ情報を掲載。"
+  description:
+    short: "devour 公式サイト。サポート・アプリ情報を掲載。"
   tags:
     - typescript
     - hono
     - static-site
+  links:
+    - url: https://github.com/devour-jp/devour-site
 spec:
   type: docs
   lifecycle: production
@@ -188,6 +244,8 @@ spec:
     release:
       current:
         date: "2026-03-23"
-        headline: "公式サイト運用中"
+        headline:
+          short: "公式サイト運用中"
     author:
-      comment: "devour プロジェクトのホーム"
+      comment:
+        short: "devour プロジェクトのホーム"
