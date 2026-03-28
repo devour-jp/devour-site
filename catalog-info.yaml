@@ -190,6 +190,8 @@ metadata:
     - url: https://zenn.dev/nonamecode/articles/7ded7a9be3477a
     - url: https://creators-dashboard.devour.jp/
       title: "Creators Dashboard(仮) (beta)"
+    - url: https://devour.jp/apps/creators-dashboard/
+      title: "紹介サイト"
 spec:
   type: website
   lifecycle: experimental
