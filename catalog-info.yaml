@@ -130,6 +130,7 @@ metadata:
     - walking
   links:
     - url: https://apps.apple.com/us/app/%E3%81%93%E3%81%93%E3%81%99%E3%81%8D/id6760634470
+    - url: https://note.com/namelesscode/n/n8a89f378e012
     - url: https://devour.jp/apps/kokosuki/
       title: 紹介サイト
 spec:
@@ -189,7 +190,10 @@ metadata:
     - ssr
     - dashboard
   links:
-    - url: https://github.com/devour-jp/devour-site
+    - url: https://note.com/namelesscode/n/n449a4482e2bb
+    - url: https://zenn.dev/nonamecode/articles/7ded7a9be3477a
+    - url: https://creators-dashboard.devour.jp/
+      title: "Creators Dashboard(仮) (beta)"
 spec:
   type: website
   lifecycle: experimental
