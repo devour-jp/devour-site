@@ -56,10 +56,6 @@ spec:
       comment:
         short: "テストデータです。"
         long: "テストデータです。\n実際のプロジェクトではありませんが、全フィールドの表示確認用として使用しています。"
-    social:
-      x:
-        account: "DEVOUR_JP"
-        fix: "2037208350895812662"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
