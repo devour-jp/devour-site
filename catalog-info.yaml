@@ -217,8 +217,9 @@ spec:
     social:
       x:
         account: "DEVOUR_JP"
+        fix: "2037718421849461220"
         latest:
-          query: "Creators Dashboard"
+          query: "Creators-Dashboard"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
