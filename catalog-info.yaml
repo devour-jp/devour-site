@@ -203,6 +203,11 @@ spec:
         headline:
           short: "org ページ + TextPair + social 再設計"
           long: "org ページ（開発者ポートフォリオ）を新設しました。\nプロフィール・外部リンク・X 投稿（fix / latest）をまとめて表示。テキスト項目は short / long の2段階で、org ページではより詳しい情報を複数行で表示できます。"
+      next:
+        version: "1.3.1"
+        date: "2026-04-01"
+        headline:
+          short: "orgのpreviewリリース予定"
     author:
       comment:
         short: "少しずつ桜が咲いてきたように感じます"
