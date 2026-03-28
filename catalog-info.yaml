@@ -60,8 +60,6 @@ spec:
       x:
         account: "DEVOUR_JP"
         fix: "2037208350895812662"
-        latest:
-          query: ""
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
@@ -174,8 +172,6 @@ spec:
         x:
           account: "DEVOUR_JP"
           fix: "2037714443686293785"
-          latest:
-            query: ""
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
