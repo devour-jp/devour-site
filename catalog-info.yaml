@@ -217,7 +217,6 @@ spec:
     social:
       x:
         account: "DEVOUR_JP"
-        fix: "2037208350895812662"
         latest:
           query: "Creators Dashboard"
 ---
