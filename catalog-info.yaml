@@ -54,8 +54,8 @@ spec:
           long: "ガントチャートビューを追加予定です。\nタスクの期間と依存関係を視覚的に表示。プロジェクト管理がさらに便利になります。"
     author:
       comment:
-        short: "テストデータです。"
-        long: "テストデータです。\n実際のプロジェクトではありませんが、全フィールドの表示確認用として使用しています。"
+        short: "デモデータです。"
+        long: "デモデータです。\n実際のプロジェクトではありませんが、全フィールドの表示確認用として使用しています。"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
@@ -168,6 +168,8 @@ spec:
         x:
           account: "DEVOUR_JP"
           fix: "2037714443686293785"
+          latest:
+            query: "ここすき"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
