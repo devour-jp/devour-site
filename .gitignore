@@ -36,3 +36,6 @@ build/
 !apps/**/images/**/*.jpg
 !apps/**/promotion/**/*.png
 !apps/**/promotion/**/*.jpg
+
+# Claude Code
+.claude/

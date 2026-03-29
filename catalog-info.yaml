@@ -248,3 +248,34 @@ spec:
     author:
       comment:
         short: "devour プロジェクトのホーム"
+---
+apiVersion: devour.jp/v1alpha1
+kind: Component
+metadata:
+  name: nameless
+  description:
+    short: "nameless(仮)"
+spec:
+  type: website
+  lifecycle: experimental
+  owner: devour-jp
+  devour:
+    card:
+      bg: "#0F172A"
+      fg: "#F8FAFC"
+    category: ""
+    release:
+      current:
+        version: "v0.0.1"
+        date: "2026-03-30"
+        headline:
+          short: "行動パタンを全てjson化"
+    author:
+      comment:
+        short: "初めてのゲーム開発。まずは2Dで"
+    social:
+      x:
+        account: "DEVOUR_JP"
+        fix: "2038280951999156251"
+        latest:
+          query: "クリック"
