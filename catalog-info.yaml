@@ -150,7 +150,7 @@ spec:
     social:
       x:
         account: "DEVOUR_JP"
-        fix: "2038605144179499388"
+        fix: "2038606311290741168"
         latest:
           query: "ここすき"
     org:
