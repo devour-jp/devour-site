@@ -231,8 +231,8 @@ metadata:
     - typescript
     - hono
     - static-site
-  links:
-    - url: https://github.com/devour-jp/devour-site
+    - url: https://devour.jp/
+      title: DEVOUR
 spec:
   type: docs
   lifecycle: production
