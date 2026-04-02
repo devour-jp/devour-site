@@ -152,8 +152,6 @@ spec:
       x:
         account: "DEVOUR_JP"
         fix: "2038606311290741168"
-        latest:
-          query: "ここすき"
     org:
       bio:
         short: "子ども向けアプリと開発ツールを作ってます。街を歩いて名前をつけるアプリ「ここすき」、個人開発のダッシュボード「Creators Dashboard」を開発中。"
@@ -169,8 +167,6 @@ spec:
         x:
           account: "DEVOUR_JP"
           fix: "2037714443686293785"
-          latest:
-            query: "ここすき"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
@@ -218,8 +214,6 @@ spec:
       x:
         account: "DEVOUR_JP"
         fix: "2037718421849461220"
-        latest:
-          query: "Creators"
 ---
 apiVersion: devour.jp/v1alpha1
 kind: Component
@@ -282,5 +276,3 @@ spec:
       x:
         account: "DEVOUR_JP"
         fix: "2038280951999156251"
-        latest:
-          query: "クリック"
