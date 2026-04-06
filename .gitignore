@@ -36,6 +36,10 @@ build/
 !apps/**/images/**/*.jpg
 !apps/**/promotion/**/*.png
 !apps/**/promotion/**/*.jpg
+!public/apps/**/images/**/*.png
+!public/apps/**/images/**/*.jpg
+!public/apps/**/promotion/**/*.png
+!public/apps/**/promotion/**/*.jpg
 
 # Claude Code
 .claude/
