@@ -247,32 +247,44 @@ spec:
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
-  name: nameless(仮)
+  name: pochipochi
   description:
-    short: "爽快ポチポチ、クリックゲーム(予定)"
+    short: "漢字の読みをゲーム感覚で学べる学習アプリ。"
+    long: "ぽちぽち は漢字の読みをゲーム感覚で学べる学習アプリです。\n漢字 1,026 字に対応し、音読み・訓読み・両方の 3 モードで学習できます。\nヒント付きで間違えても安心。プロファイルを分けて管理でき、難易度設定や記録の振り返りも可能です。"
+  tags:
+    - unity
+    - ios
+    - android
+    - kanji
+    - education
+    - learning
+    - game
+    - offline
+  links:
+    - url: https://devour.jp/apps/pochipochi/
+      title: 紹介サイト
 spec:
-  type: website
+  type: game
   lifecycle: experimental
   owner: devour-jp
-  description:
-    short: "爽快ポチポチ、クリックゲーム(予定)"
-  links:
-    - url: https://x.com/DEVOUR_JP/status/2038280951999156251
   devour:
+    image: "https://devour.jp/apps/pochipochi/ogp.png"
     card:
-      bg: "#0F172A"
-      fg: "#F8FAFC"
-    category: ""
+      bg: "#93C5FD"
+      fg: "#1E3A5F"
+    category: "education"
     release:
       current:
-        version: "0.0.1"
-        date: "2026-03-30"
+        version: "1.0.0"
+        date: "2026-04-07"
         headline:
-          short: "行動パタンを全てjson化"
+          short: "iOS 審査中・Android 準備中"
+          long: "漢字 1,026 字対応の学習アプリ。音読み・訓読み・両方の 3 モードで学習できます。\nヒント機能、プロファイル管理（最大 6 件）、難易度設定、記録の振り返り機能を搭載。"
+      next:
+        version: "1.1.0"
+        date: "2026-04-21"
+        headline:
+          short: "算数対応予定"
     author:
       comment:
         short: "初めてのゲーム開発。まずは2Dで"
-    social:
-      x:
-        account: "DEVOUR_JP"
-        fix: "2038280951999156251"
