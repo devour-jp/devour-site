@@ -247,7 +247,7 @@ spec:
 apiVersion: devour.jp/v1alpha1
 kind: Component
 metadata:
-  name: pochipochi
+  name: ぽちぽち
   description:
     short: "漢字の読みをゲーム感覚で学べる学習アプリ。"
     long: "ぽちぽち は漢字の読みをゲーム感覚で学べる学習アプリです。\n漢字 1,026 字に対応し、音読み・訓読み・両方の 3 モードで学習できます。\nヒント付きで間違えても安心。プロファイルを分けて管理でき、難易度設定や記録の振り返りも可能です。"
