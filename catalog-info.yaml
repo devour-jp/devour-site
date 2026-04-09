@@ -263,6 +263,7 @@ metadata:
   links:
     - url: https://devour.jp/apps/pochipochi/
       title: 紹介サイト
+    - https://apps.apple.com/us/app/%E3%81%BD%E3%81%A1%E3%81%BD%E3%81%A1/id6761755584
 spec:
   type: game
   lifecycle: experimental
@@ -278,13 +279,8 @@ spec:
         version: "1.0.0"
         date: "2026-04-07"
         headline:
-          short: "iOS 審査中・Android 準備中"
+          short: "iOS 公開中・Android 準備中"
           long: "漢字 1,026 字対応の学習アプリ。音読み・訓読み・両方の 3 モードで学習できます。\nヒント機能、プロファイル管理（最大 6 件）、難易度設定、記録の振り返り機能を搭載。"
-      next:
-        version: "1.1.0"
-        date: "2026-04-21"
-        headline:
-          short: "算数対応予定"
     author:
       comment:
         short: "初めてのゲーム開発。まずは2Dで"
