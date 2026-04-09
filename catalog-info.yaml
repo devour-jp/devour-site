@@ -263,7 +263,7 @@ metadata:
   links:
     - url: https://devour.jp/apps/pochipochi/
       title: 紹介サイト
-    - https://apps.apple.com/us/app/%E3%81%BD%E3%81%A1%E3%81%BD%E3%81%A1/id6761755584
+    - url: https://apps.apple.com/us/app/%E3%81%BD%E3%81%A1%E3%81%BD%E3%81%A1/id6761755584
 spec:
   type: game
   lifecycle: experimental
