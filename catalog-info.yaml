@@ -264,9 +264,10 @@ metadata:
     - url: https://devour.jp/apps/pochipochi/
       title: 紹介サイト
     - url: https://apps.apple.com/us/app/%E3%81%BD%E3%81%A1%E3%81%BD%E3%81%A1/id6761755584
+      title: App Store
 spec:
   type: game
-  lifecycle: experimental
+  lifecycle: production
   owner: devour-jp
   devour:
     image: "https://devour.jp/apps/pochipochi/ogp.png"
@@ -277,7 +278,7 @@ spec:
     release:
       current:
         version: "1.0.0"
-        date: "2026-04-07"
+        date: "2026-04-09"
         headline:
           short: "iOS 公開中・Android 準備中"
           long: "漢字 1,026 字対応の学習アプリ。音読み・訓読み・両方の 3 モードで学習できます。\nヒント機能、プロファイル管理（最大 6 件）、難易度設定、記録の振り返り機能を搭載。"
