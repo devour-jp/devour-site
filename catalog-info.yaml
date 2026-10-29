@@ -4,7 +4,7 @@ kind: Component
 metadata:
   name: taskflow
   description:
-    short: "シンプルで高速なタスク管理アプリ。ドラッグ&ドロップでカンバンボード操作。"
+    short: "[事例]シンプルで高速なタスク管理アプリ。ドラッグ&ドロップでカンバンボード操作。"
     long: "TaskFlow は個人やチームのタスク管理を効率化する Web アプリケーションです。\n直感的なドラッグ&ドロップでカンバンボードを操作でき、リアルタイム共同編集にも対応。\nPWA として動作するため、オフラインでもタスクの確認・編集が可能です。"
   tags:
     - react
@@ -44,7 +44,7 @@ spec:
         version: "2.1.0"
         date: "2026-03-21"
         headline:
-          short: "リアルタイム共同編集に対応"
+          short: "[事例]リアルタイム共同編集に対応"
           long: "リアルタイム共同編集に対応しました。\n複数人で同時にカンバンボードを操作できます。WebSocket による低遅延の同期を実現。"
       next:
         version: "2.2.0"
@@ -62,7 +62,7 @@ kind: Component
 metadata:
   name: md-press
   description:
-    short: "Markdown ファイルからブログを生成する静的サイトジェネレーター。ゼロコンフィグで即公開。"
+    short: "[事例]Markdown ファイルからブログを生成する静的サイトジェネレーター。ゼロコンフィグで即公開。"
   tags:
     - rust
     - markdown
@@ -78,7 +78,7 @@ kind: Component
 metadata:
   name: dotkeeper
   description:
-    short: "dotfiles を Git で管理する CLI ツール。stow 不要、シンボリックリンクを自動生成。"
+    short: "[事例]dotfiles を Git で管理する CLI ツール。stow 不要、シンボリックリンクを自動生成。"
   tags:
     - go
     - cli
@@ -94,7 +94,7 @@ kind: Component
 metadata:
   name: pomo-kun
   description:
-    short: "かわいいキャラと一緒に集中する、ポモドーロタイマーアプリ。iOS / Android 対応。"
+    short: "[事例]かわいいキャラと一緒に集中する、ポモドーロタイマーアプリ。iOS / Android 対応。"
   tags:
     - swift
     - ios
